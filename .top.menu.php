@@ -2,7 +2,7 @@
 $aMenuLinks = Array(
 	Array(
 		"Главная", 
-		SITE_DIR."/index.php", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
