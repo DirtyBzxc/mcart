@@ -1,8 +1,15 @@
 <?
 $aMenuLinks = Array(
 	Array(
+		"Главная", 
+		SITE_DIR."/index.php", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
 		"Объявления", 
-		SITE_DIR."/ announcements/", 
+		SITE_DIR."/announcements/", 
 		Array(), 
 		Array(), 
 		"" 
@@ -19,14 +26,14 @@ $aMenuLinks = Array(
 		SITE_DIR."/seller/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,8))" 
 	),
 	Array(
 		"ЛК покупателя", 
 		SITE_DIR."/customer/", 
 		Array(), 
 		Array(), 
-		"" 
+		"CSite::InGroup(array(1,7))" 
 	)
 );
 ?>
