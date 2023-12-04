@@ -1,5 +1,13 @@
 <?php
 $arUrlRewrite=array (
+  9 => 
+  array (
+    'CONDITION' => '#^/seller/seller_ads/#',
+    'RULE' => '',
+    'ID' => 'bitrix:news',
+    'PATH' => '/seller/seller_ads/index.php',
+    'SORT' => 100,
+  ),
   7 => 
   array (
     'CONDITION' => '#^/about/vacancies/#',
@@ -16,7 +24,7 @@ $arUrlRewrite=array (
     'PATH' => '/announcements/index.php',
     'SORT' => 100,
   ),
-  6 => 
+  10 => 
   array (
     'CONDITION' => '#^/about/news/#',
     'RULE' => '',
