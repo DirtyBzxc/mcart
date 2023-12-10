@@ -1,4 +1,5 @@
 <?
+$PERM["local"]["2"]="X";
 $PERM["seller"]["9"]="W";
 $PERM["seller"]["8"]="R";
 $PERM["seller"]["*"]="D";
