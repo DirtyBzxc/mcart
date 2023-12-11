@@ -1,35 +1,37 @@
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php
+IncludeTemplateLangFile(__FILE__);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>HomeSpace &mdash; Colorlib Website Template</title>
+    <title><?php $APPLICATION->ShowTitle();?></title>
     <meta charset="utf-8">
+    <?php $APPLICATION->ShowHead();?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
     <link rel="stylesheet" href="fonts/icomoon/style.css">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/mediaelementplayer.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="css/fl-bigmug-line.css">
-
-
-    <link rel="stylesheet" href="css/aos.css">
-
-    <link rel="stylesheet" href="css/style.css">
-
+<?php
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/magnific-popup.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/owl.carousel.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/owl.theme.default.min.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/bootstrap-datepicker.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/mediaelementplayer.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/animate.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/fonts/flaticon/font/flaticon.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/fl-bigmug-line.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/aos.css");
+$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH."/css/style.css");
+?>
 </head>
 
 <body>
-
+<div id="page-wrapper">
+    <div id="panel"><?php $APPLICATION->ShowPanel();?></div>
 <div class="site-loader"></div>
 
 <div class="site-wrap">
@@ -109,10 +111,4 @@
     </div>
 </div>
 
-<?
-$APPLICATION->IncludeFile(
-    SITE_DIR."local/templates/home/index.php",
-    Array(),
-    Array("MODE"=>"html")
-);
-?>
+

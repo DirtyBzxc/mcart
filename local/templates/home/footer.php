@@ -1,3 +1,7 @@
+<?php
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+IncludeTemplateLangFile(__FILE__);
+?>
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -83,9 +87,24 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/bootstrap-datepicker.min.js"></script>
 <script src="js/aos.js"></script>
-
 <script src="js/main.js"></script>
+<?php
 
+$APPLICATION->AddHeadScript('js/jquery-3.3.1.min.js');
+$APPLICATION->AddHeadScript('js/jquery-migrate-3.0.1.min.js');
+$APPLICATION->AddHeadScript('js/jquery-ui.js');
+$APPLICATION->AddHeadScript('js/popper.min.js');
+$APPLICATION->AddHeadScript('js/bootstrap.min.js');
+$APPLICATION->AddHeadScript('js/owl.carousel.min.js');
+$APPLICATION->AddHeadScript('js/mediaelement-and-player.min.js');
+$APPLICATION->AddHeadScript('js/jquery.stellar.min.js');
+$APPLICATION->AddHeadScript('js/jquery.countdown.min.js');
+$APPLICATION->AddHeadScript('js/jquery.magnific-popup.min.js');
+$APPLICATION->AddHeadScript('js/bootstrap-datepicker.min.js');
+$APPLICATION->AddHeadScript('js/aos.js');
+$APPLICATION->AddHeadScript('js/main.js');
+
+?>
 </body>
 
 </html>
