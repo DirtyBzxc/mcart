@@ -1,32 +1,6 @@
 <?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/phone.php"
-	),
-false,
-Array(
-	'ACTIVE_COMPONENT' => 'N'
-)
-);?> <?$APPLICATION->IncludeComponent(
-	"bitrix:main.include",
-	"",
-	Array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/email.php"
-	),
-false,
-Array(
-	'ACTIVE_COMPONENT' => 'N'
-)
-);?><?
+?><?
 $GLOBALS['arrFilter'] = array('PROPERTY_PREFERRED_DEAL_VALUE' => 'да');
 $APPLICATION->IncludeComponent(
 	"bitrix:news.list", 

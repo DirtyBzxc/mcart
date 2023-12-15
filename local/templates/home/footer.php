@@ -15,19 +15,25 @@ IncludeTemplateLangFile(__FILE__);
                     "PATH" => "/include/footer/about.php"
                 )
             );?>
-            <?$APPLICATION->IncludeComponent("bitrix:menu",".default",Array(
-                    "ROOT_MENU_TYPE" => "top",
-                    "MAX_LEVEL" => "1",
-                    "CHILD_MENU_TYPE" => "top",
-                    "USE_EXT" => "Y",
-                    "DELAY" => "N",
-                    "ALLOW_MULTI_SELECT" => "Y",
-                    "MENU_CACHE_TYPE" => "N",
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "MENU_CACHE_GET_VARS" => ""
-                )
-            );?>
+            <?$APPLICATION->IncludeComponent(
+	"bitrix:menu", 
+	".default", 
+	array(
+		"ROOT_MENU_TYPE" => "top",
+		"MAX_LEVEL" => "1",
+		"CHILD_MENU_TYPE" => "top",
+		"USE_EXT" => "Y",
+		"DELAY" => "N",
+		"ALLOW_MULTI_SELECT" => "Y",
+		"MENU_CACHE_TYPE" => "Y",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_CACHE_GET_VARS" => array(
+		),
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
+);?>
             <div class="col-lg-4 mb-5 mb-lg-0">
                 <div class="row mb-5">
                     <div class="col-md-12">
