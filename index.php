@@ -15,7 +15,7 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000",
+		"CACHE_TIME" => "600",
 		"CACHE_TYPE" => "Y",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
@@ -143,7 +143,7 @@ $APPLICATION->IncludeComponent(
 	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000",
+		"CACHE_TIME" => "600",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
@@ -433,23 +433,30 @@ $APPLICATION->IncludeComponent(
 	</div>
 </div>
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	"",
-	Array(
+	"bitrix:news.line", 
+	".default", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "300",
-		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "600",
+		"CACHE_TYPE" => "Y",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array("",""),
-		"IBLOCKS" => array("3"),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "3",
+		),
 		"IBLOCK_TYPE" => "news",
 		"NEWS_COUNT" => "3",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC"
-	)
+		"SORT_ORDER2" => "ASC",
+		"COMPONENT_TEMPLATE" => ".default"
+	),
+	false
 );?>
 <div class="site-section bg-light">
 	<div class="container">
