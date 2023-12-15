@@ -13,9 +13,9 @@ $APPLICATION->IncludeComponent(
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
-		"CACHE_FILTER" => "N",
+		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "3600",
+		"CACHE_TIME" => "36000",
 		"CACHE_TYPE" => "Y",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
@@ -138,24 +138,30 @@ $APPLICATION->IncludeComponent(
 				<h2><br>
  </h2>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	".default",
-	Array(
+	"bitrix:news.line", 
+	".default", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "3600",
+		"CACHE_TIME" => "36000",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(0=>"",1=>"",),
-		"IBLOCKS" => array(0=>"1",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCKS" => array(
+			0 => "1",
+		),
 		"IBLOCK_TYPE" => "advertisements",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?>
 				<h2>New Properties for You</h2>
 			</div>
@@ -346,24 +352,29 @@ $APPLICATION->IncludeComponent(
 			<div class="col-md-7 text-center mb-5">
 				<div class="site-section-title">
 					 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line",
-	".default",
-	Array(
+	"bitrix:news.line", 
+	".default", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "3600",
+		"CACHE_TIME" => "36000",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(0=>"",1=>"",),
-		"IBLOCKS" => array(),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
+		"IBLOCKS" => array(
+		),
 		"IBLOCK_TYPE" => "services",
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
-	)
+	),
+	false
 );?>
 					<h2>Our Services</h2>
 				</div>
