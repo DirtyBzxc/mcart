@@ -26,22 +26,9 @@ false,
 Array(
 	'ACTIVE_COMPONENT' => 'N'
 )
-);?><?$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"",
-	Array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(""),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N"
-	)
-);?><?$APPLICATION->IncludeComponent(
+);?><?
+$GLOBALS['arrFilter'] = array('PROPERTY_PREFERRED_DEAL_VALUE' => 'да');
+$APPLICATION->IncludeComponent(
 	"bitrix:news.list", 
 	".default", 
 	array(
@@ -57,6 +44,7 @@ Array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "Y",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -68,7 +56,7 @@ Array(
 			0 => "",
 			1 => "",
 		),
-		"FILTER_NAME" => "",
+		"FILTER_NAME" => "arrFilter",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "1",
 		"IBLOCK_TYPE" => "advertisements",
@@ -87,9 +75,8 @@ Array(
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "PREFERRED_DEAL",
+			0 => "",
 			1 => "",
-			2 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
 		"SET_LAST_MODIFIED" => "N",
@@ -102,8 +89,7 @@ Array(
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
+		"STRICT_SECTION_CHECK" => "N"
 	),
 	false
 );?>
@@ -178,30 +164,24 @@ Array(
 				<h2><br>
  </h2>
 				 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	".default", 
-	array(
+	"bitrix:news.line",
+	".default",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"IBLOCKS" => array(
-			0 => "1",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
+		"IBLOCKS" => array(0=>"1",),
 		"IBLOCK_TYPE" => "advertisements",
 		"NEWS_COUNT" => "9",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
+		"SORT_ORDER2" => "ASC"
+	)
 );?>
 				<h2>New Properties for You</h2>
 			</div>
@@ -392,29 +372,24 @@ Array(
 			<div class="col-md-7 text-center mb-5">
 				<div class="site-section-title">
 					 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.line", 
-	".default", 
-	array(
+	"bitrix:news.line",
+	".default",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "Y",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"IBLOCKS" => array(
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
+		"IBLOCKS" => array(),
 		"IBLOCK_TYPE" => "services",
 		"NEWS_COUNT" => "6",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
+		"SORT_ORDER2" => "ASC"
+	)
 );?>
 					<h2>Our Services</h2>
 				</div>
